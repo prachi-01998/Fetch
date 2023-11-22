@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Inference App</title>
+    <style>
+        body {
+            background: {{ background_color }};
+            color: #fff;  /* Text color on the gradient background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #da1b60;  /* Button color */
+            color: #fff;  /* Text color on the button */
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Model Inference App</h1>
+    <form action="/predict" method="post">
+        <label for="month">Month:</label>
+        <input type="text" name="month" required><br>
+
+        <label for="date">Date:</label>
+        <input type="text" name="date" required><br>
+
+        <label for="day">Day:</label>
+        <input type="text" name="day" required><br>
+	
+	<label for="year">Year:</label>
+        <input type="text" name="year" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
